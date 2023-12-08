@@ -1,0 +1,14 @@
+# Settings file
+# ~ - replacement for base directory
+
+# Upload path for files to be converted
+UploadPath: ~\\Content
+
+# Connection string for database
+ConnectionString: "data source=~/Content/database.db;"
+
+# Google Chrome browser location (i.e. C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe)
+ChromePath: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+
+# Timeout for PDF Creation process (sec.)
+PdfCreationTimeoutSec: 60 

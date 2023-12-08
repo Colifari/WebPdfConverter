@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPdfConverter", "WebPdfConverter\WebPdfConverter.csproj", "{4FD5052C-4C9D-4BB8-848F-16F507E54C97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteWebPdfConverterLib", "SQLiteWebPdfConverterLib\SQLiteWebPdfConverterLib.csproj", "{6F10C7F9-1EBD-4925-8CFD-324A11E0FB0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPdfConverterCommonLib", "WebPdfConverterCommonLib\WebPdfConverterCommonLib.csproj", "{B386C0F3-E760-4007-AE73-C26E27D62F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPdfConverterTests", "WebPdfConverterTests\WebPdfConverterTests.csproj", "{D3A6A225-99F0-41E2-9857-03DA54DFEB9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FD5052C-4C9D-4BB8-848F-16F507E54C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD5052C-4C9D-4BB8-848F-16F507E54C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD5052C-4C9D-4BB8-848F-16F507E54C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD5052C-4C9D-4BB8-848F-16F507E54C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F10C7F9-1EBD-4925-8CFD-324A11E0FB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F10C7F9-1EBD-4925-8CFD-324A11E0FB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F10C7F9-1EBD-4925-8CFD-324A11E0FB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F10C7F9-1EBD-4925-8CFD-324A11E0FB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B386C0F3-E760-4007-AE73-C26E27D62F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B386C0F3-E760-4007-AE73-C26E27D62F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B386C0F3-E760-4007-AE73-C26E27D62F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B386C0F3-E760-4007-AE73-C26E27D62F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3A6A225-99F0-41E2-9857-03DA54DFEB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3A6A225-99F0-41E2-9857-03DA54DFEB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3A6A225-99F0-41E2-9857-03DA54DFEB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3A6A225-99F0-41E2-9857-03DA54DFEB9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B8EB43F-F3BD-4ABF-80F9-E39AF827FF43}
+	EndGlobalSection
+EndGlobal

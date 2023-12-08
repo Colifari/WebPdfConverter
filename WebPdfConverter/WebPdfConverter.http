@@ -1,0 +1,16 @@
+@WebPdfConverter_HostAddress = http://localhost:5003
+
+GET {{WebPdfConverter_HostAddress}}/api/file
+Accept: application/json
+
+###
+
+GET {{WebPdfConverter_HostAddress}}/api/file/file.html
+Accept: text/html
+
+###
+
+DELETE {{WebPdfConverter_HostAddress}}/api/file/file.html
+Accept: application/json
+
+###
