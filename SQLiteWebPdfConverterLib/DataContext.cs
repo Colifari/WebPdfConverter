@@ -2,6 +2,7 @@
 using SQLiteWebPdfConverterLib.Tables;
 using System.Diagnostics;
 using System.Runtime;
+using System.Text.RegularExpressions;
 using WebPdfConverterCommonLib.DTO;
 using WebPdfConverterCommonLib.Tools;
 
@@ -14,11 +15,13 @@ namespace SQLiteWebPdfConverterLib
     {
         readonly ISettings settings;
         public string ConnectionString;
+        readonly Regex regex;
 
         public DataContext(ISettings settings)
         {
             this.settings = settings;
             ConnectionString = settings.Current.ConnectionString;
+            regex = new Regex(@"data source=([A-z0-9:\/\.]+);");
             init();
         }
         
@@ -31,7 +34,16 @@ namespace SQLiteWebPdfConverterLib
         {
             SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_e_sqlite3());
 
-            Files = new FilesTO(ConnectionString, this);            
+            Files = new FilesTO(ConnectionString, this);
+
+            var m = regex.Match(settings.Current.ConnectionString);
+            if (m.Success)
+            {
+                if (m.Groups.Count > 1)
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(m.Groups[1].Value));
+                }
+            }
 
             createIfNotExist();
         }
@@ -45,10 +57,12 @@ namespace SQLiteWebPdfConverterLib
         public void DropDatabase()
         {
             SqliteConnection.ClearAllPools();
-            var path = settings.Current.ConnectionString.Replace("data source=", "");
-            path = path.Remove(path.Length - 1, 1);
-            if(File.Exists(path))
-                File.Delete(path);
+            var m = regex.Match(settings.Current.ConnectionString);
+            if(m.Success)
+            {
+                if (m.Groups.Count > 1 && File.Exists(m.Groups[1].Value))
+                    File.Delete(m.Groups[1].Value);
+            }
         }
 
         public void Dispose()
